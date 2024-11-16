@@ -100,7 +100,7 @@ def generate_prediction(input_data, location, base_date, num_weeks):
         
         plt.axvline(x=len(data)-1, color='gray', linestyle='--', alpha=0.5)
         
-        plt.title(f'COVID-19 Cases Prediction for {location}')
+        plt.title(f'Dengue Cases Prediction for {location}')
         plt.xlabel('Time')
         plt.ylabel('Weekly Cases')
         plt.legend()
@@ -174,9 +174,9 @@ def create_gradio_interface():
             gr.Textbox(label="Weekly Predictions"),
             gr.Textbox(label="Error Messages")
         ],
-        title="COVID-19 Cases Prediction by Location",
+        title="Dengue Cases Prediction by Location",
         description=f"""
-        This application predicts weekly COVID-19 cases for specific locations using a trained LSTM model.
+        This application predicts weekly dengue cases for specific locations using a trained LSTM model.
         Please provide exactly {seq_length} weeks of historical case counts for accurate predictions.
         """,
         examples=[
